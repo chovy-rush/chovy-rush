@@ -31,7 +31,8 @@ jobs:
         server-id: chovy-rush-snapshot
         server-username: MAVEN_REPO_USERNAME
         server-password: MAVEN_REPO_PASSWORD
-
+    - name: cattest
+      run: cat /home/runner/.m2/settings.xml
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 

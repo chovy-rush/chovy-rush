@@ -33,11 +33,11 @@
     <distributionManagement>
         <repository>
             <id>chovy-rush-release</id>
-            <url>https://614d677dd6ea5ebe4a1a68ab:9QWG5Dz1uTYS@packages.aliyun.com/614d6795be5c9fe01566ea6f/maven/2140875-release-omwzmx</url>
+            <url>https://packages.aliyun.com/614d6795be5c9fe01566ea6f/maven/2140875-release-omwzmx</url>
         </repository>
         <snapshotRepository>
             <id>chovy-rush-snapshot</id>
-            <url>https://614d677dd6ea5ebe4a1a68ab:9QWG5Dz1uTYS@packages.aliyun.com/614d6795be5c9fe01566ea6f/maven/2140875-snapshot-6dgexa</url>
+            <url>https://packages.aliyun.com/614d6795be5c9fe01566ea6f/maven/2140875-snapshot-6dgexa</url>
         </snapshotRepository>
     </distributionManagement>
 </project>

@@ -28,22 +28,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - name: Create custom Maven settings file
-        run: |
-          mkdir -p $HOME/.m2
-          cat > $HOME/.m2/settings.xml <<EOF
-          <settings>
-            <servers>
-              <server>
-                <id>your-repo-id</id>
-                <username>${{ secrets.MAVEN_REPO_USERNAME }}</username>
-                <password>${{ secrets.MAVEN_REPO_PASSWORD }}</password>
-              </server>
-            </servers>
-            <!-- 你还可以添加其他需要的配置 -->
-          </settings>
-          EOF
-
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy
       env:

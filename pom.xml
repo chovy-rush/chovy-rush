@@ -21,7 +21,7 @@
     <repositories>
         <repository>
             <id>chovy-rush-release</id>
-            <url>https://packages.aliyun.com/614d6795be5c9fe01566ea6f/maven/2140875-release-omwzmx</url>
+            <url>https://614d677dd6ea5ebe4a1a68ab:9QWG5Dz1uTYS@packages.aliyun.com/614d6795be5c9fe01566ea6f/maven/2140875-release-omwzmx</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -33,11 +33,36 @@
     <distributionManagement>
         <repository>
             <id>chovy-rush-release</id>
-            <url>https://packages.aliyun.com/614d6795be5c9fe01566ea6f/maven/2140875-release-omwzmx</url>
+            <url>https://614d677dd6ea5ebe4a1a68ab:9QWG5Dz1uTYS@packages.aliyun.com/614d6795be5c9fe01566ea6f/maven/2140875-release-omwzmx</url>
         </repository>
         <snapshotRepository>
             <id>chovy-rush-snapshot</id>
-            <url>https://packages.aliyun.com/614d6795be5c9fe01566ea6f/maven/2140875-snapshot-6dgexa</url>
+            <url>https://614d677dd6ea5ebe4a1a68ab:9QWG5Dz1uTYS@packages.aliyun.com/614d6795be5c9fe01566ea6f/maven/2140875-snapshot-6dgexa</url>
         </snapshotRepository>
     </distributionManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.diffplug.spotless</groupId>
+                <artifactId>spotless-maven-plugin</artifactId>
+                <version>2.17.5</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <java>
+                        <googleJavaFormat>
+                            <!-- 使用 Google Java Format 的 AOSP 风格 -->
+                            <style>AOSP</style>
+                        </googleJavaFormat>
+                        <removeUnusedImports/>
+                    </java>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
